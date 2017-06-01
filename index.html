@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Player com Javascript</title>
+	<link rel="stylesheet" type="text/css" href="plugin/css/style.css"> <!-- carregando css do plugin -->
+	<link rel="stylesheet" type="text/css" href="css/estilo.css"> <!-- carregando meu estilo de pagina -->
+	<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script> <!-- carregando primeiro jquery -->
+    <script type="text/javascript" src="plugin/jquery-jplayer/jquery.jplayer.js"></script> <!-- carregando js do plugin -->
+    <script type="text/javascript" src="plugin/ttw-music-player-min.js"></script> <!-- carregando js do plugin -->
+    <script type="text/javascript" src="js/myplaylist.js"></script> <!-- carregando js criado para playlist -->
+
+   <!-- inicializando o plugin -->
+    <script type="text/javascript">
+    	// funcao criada para descricao- texto a ser apresentado na pagina
+        $(document).ready(function(){ 
+            var description = 'Cameron Jibril Thomaz (nascido em 08 de setembro de 1987), mais conhecido pelo nome artístico de Wiz Khalifa, é um rapper americano. Ele lançou seu álbum de estréia, mostrar e provar, em 2006, e assinou com a Warner Bros Records em 2007. Sua Eurodance-influenciado single, "Say Yeah", recebeu airplay de rádio urbana, traçando no Top 40 e Rítmica Rap Hot Tracks paradas em 2008.  Khalifa se separaram com a Warner Bros e lançou seu segundo álbum, Deal or No Deal, em novembro de 2009. ';
+
+            $('body').ttwMusicPlayer(myPlaylist, {
+                autoPlay:false, //autoplay sem inicializar com play
+                description:description,
+                jPlayer:{
+                    swfPath:'plugin/jquery-jplayer' //diretorio do plugin para carregar
+                }
+            });
+        });
+  
+
+    </script>
+</head>
+<body>
+<div class="logo"></div> <!-- criando div para carregar logo via css -->
+</body>
+</html>
